@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f8ff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Login screen */
+#loginScreen {
+  text-align: center;
+}
+
+#loginScreen input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#loginScreen button {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Cat screen */
+#catScreen {
+  display: none;
+  text-align: center;
+}
+
+#catScreen img {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#catScreen img.pop {
+  animation: popEffect 0.3s ease;
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Floating statements */
+.statement {
+  position: absolute;
+  color: #89CFF0; /* baby blue */
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeInOut 4s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
